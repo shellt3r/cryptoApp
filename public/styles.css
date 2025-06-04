@@ -280,7 +280,7 @@ button {
   color: white;
   border: none;
   padding: 3px;
-  width: 50px;
+  width: 5rem;
   font-size: 1.2rem;
   border-radius: 8px;
   cursor: pointer;
@@ -309,7 +309,7 @@ button:hover {
   display: none;
   position: absolute;
   top: 20px;
-  right: 20px;
+  right: 2rem;
   font-size: 2rem;
   background: none;
   border: none;
@@ -329,6 +329,10 @@ button:hover {
     box-shadow: 0 0 15px rgba(88, 166, 255, 0.3);
     margin: 10%;
   }
+
+  .actions-buttons .latest {
+  margin-bottom: 2rem;
+}
 
   .app-container {
     flex-direction: column;
@@ -376,6 +380,7 @@ button:hover {
 @media (max-width: 480px) {
   header h1 {
     font-size: 1.5rem;
+    margin-top: 14px;
   }
 
   header p {
