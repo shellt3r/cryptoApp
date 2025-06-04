@@ -28,28 +28,20 @@ Demonstrar na prática como ataques de **SQL Injection** podem ser realizados em
 
 ### 1. Clone o repositório:
 
-```bash
+```
 git clone https://github.com/seu-usuario/criptoapp-sqli-demo.git
 cd criptoapp-sqli-demo
 ```
 
 ### 2\. Instale as dependências:
 
-bash
-
 `npm install`
 
 ### 3\. Inicie o servidor:
 
-bash
-
 `node app.js`
 
 ### 4\. Acesse no navegador:
-
-arduino
-
-CopiarEditar
 
 `http://localhost:3000`
 
@@ -65,11 +57,6 @@ O app carrega usuários fictícios a partir de um JSON (`data/users.json`). Exem
 -   **Senha:** `alice123`
 
 > Tente um ataque como:
->
-> vbnet
->
->
->
 > `Email: ' OR '1'='1' --
 > Senha: qualquer coisa`
 
@@ -107,10 +94,6 @@ O objetivo é mostrar **por que devemos evitar interpolação direta em queries 
 
 📁 Estrutura de Pastas
 ----------------------
-
-pgsql
-
-CopiarEditar
 
 ```.
 ├── app.js
