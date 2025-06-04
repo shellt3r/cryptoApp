@@ -29,8 +29,8 @@ Demonstrar na prática como ataques de **SQL Injection** podem ser realizados em
 ### 1. Clone o repositório:
 
 ```
-git clone https://github.com/seu-usuario/criptoapp-sqli-demo.git
-cd criptoapp-sqli-demo
+git clone git@github.com:shellt3r/cryptoApp.git
+cd cryptoApp
 ```
 
 ### 2\. Instale as dependências:
