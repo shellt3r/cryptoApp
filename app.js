@@ -92,6 +92,9 @@ app.post('/login', (req, res) => {
   });
 });
 
+app.get('/.resiliencia', (req, res) => {
+  res.render('resiliencia');
+});
 
 app.get('/user/:sha1id', authMiddleware, (req, res, next) => {
   const sha1id = req.params.sha1id;
