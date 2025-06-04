@@ -77,7 +77,7 @@ app.get('/', (req, res) => {
 
 app.post('/login', (req, res) => {
   const { email, password } = req.body;
-
+  
   const query = `SELECT * FROM users WHERE email = '${email}' AND password = '${password}'`;
   db.get(query, (err, user) => {
     if (err) return res.status(500).send('Erro no servidor');
@@ -103,12 +103,6 @@ app.get('/user/:sha1id', authMiddleware, (req, res, next) => {
     if (!user) {
       const error = new Error('Usuário não encontrado');
       error.status = 404;
-      return next(error);
-    }
-
-    if (req.session.user.id !== user.id) {
-      const error = new Error('Acesso negado');
-      error.status = 403;
       return next(error);
     }
 
@@ -165,21 +159,3 @@ const options = {
 https.createServer(options, app).listen(443, () => {
   console.log('Servidor rodando em https://cryptoapp.io');
 });
-
-/*app.post('/login', (req, res) => {
-  const { email, password } = req.body;
-
-  // Consulta segura para evitar SQL Injection
-  const query = `SELECT * FROM users WHERE email = ? AND password = ?`;
-  db.get(query, [email, password], (err, user) => {
-    if (err) return res.status(500).send('Erro no servidor');
-
-    if (user) {
-      req.session.user = user;
-      const hashedId = sha1Id(user.id);
-      res.redirect(`/user/${hashedId}`);
-    } else {
-      res.render('login', { error: 'Login inválido' });
-    }
-  });
-});*/
