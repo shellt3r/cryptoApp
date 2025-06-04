@@ -37,15 +37,11 @@ cd criptoapp-sqli-demo
 
 bash
 
-CopiarEditar
-
 `npm install`
 
 ### 3\. Inicie o servidor:
 
 bash
-
-CopiarEditar
 
 `node app.js`
 
@@ -72,7 +68,7 @@ O app carrega usuários fictícios a partir de um JSON (`data/users.json`). Exem
 >
 > vbnet
 >
-> CopiarEditar
+>
 >
 > `Email: ' OR '1'='1' --
 > Senha: qualquer coisa`
