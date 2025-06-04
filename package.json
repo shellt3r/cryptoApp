@@ -1,5 +1,5 @@
 {
-  "name": "cryptoapp",
+  "name": "Kimura CryptoApp",
   "version": "1.0.0",
   "description": "Este é um projeto **fictício** e **educacional** que simula uma aplicação de carteira de criptomoedas com **vulnerabilidades propositais de SQL Injection**, com o objetivo de conscientizar desenvolvedores sobre os riscos e práticas seguras no desenvolvimento web.",
   "main": "app.js",
