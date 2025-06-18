@@ -78,7 +78,8 @@ app.get('/', (req, res) => {
 app.post('/login', (req, res) => {
   const { email, password } = req.body;
   
-  const query = `SELECT * FROM users WHERE email = '${email}' AND password = '${password}'`;
+  //const query = `SELECT * FROM users WHERE email = '${email}' AND password = '${password}'`;
+  $query = "SELECT * FROM users WHERE email = '$email' AND password = '$password'";
   db.get(query, (err, user) => {
     if (err) return res.status(500).send('Erro no servidor');
 
